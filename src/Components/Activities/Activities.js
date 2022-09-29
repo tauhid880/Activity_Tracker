@@ -5,11 +5,18 @@ import "./Activities.css";
 
 const Activities = () => {
   const [activities, setActivities] = useState([]);
+  const [time, setTime] = useState([]);
   useEffect(() => {
     fetch("fakedata.json")
       .then((res) => res.json())
       .then((data) => setActivities(data));
   }, []);
+
+  const handleAddToListClick = (activity) => {
+    // console.log(activity);
+    const newAdd = [...time, activity];
+    setTime(newAdd);
+  };
   return (
     <div className=" activities-container grid lg:grid-cols-6 gap-2">
       <div className="content-container lg:col-span-5">
@@ -18,12 +25,16 @@ const Activities = () => {
         </p>
         <div className="grid grid-col-1 lg:grid-cols-3 gap-x-2 gap-y-5 m-10">
           {activities.map((activity) => (
-            <Activity activity={activity} key={activity.id}></Activity>
+            <Activity
+              activity={activity}
+              key={activity.id}
+              handleAddToListClick={handleAddToListClick}
+            ></Activity>
           ))}
         </div>
       </div>
       <div className="Side-content col-span-1">
-        <Sidebar></Sidebar>
+        <Sidebar time={time}></Sidebar>
       </div>
     </div>
   );

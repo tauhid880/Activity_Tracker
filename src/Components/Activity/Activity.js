@@ -1,8 +1,9 @@
 import React from "react";
 import "./Activity.css";
 
-const Activity = (props) => {
-  const { name, img, age, time } = props.activity;
+const Activity = ({ activity, handleAddToListClick }) => {
+  const { name, img, age, time } = activity;
+
   return (
     <div className="card sm:w-auto lg:w-96 rounded-lg border border-gray-500 shadow-lg shadow-gray-500/50">
       <figure className="px-4 pt-4">
@@ -15,7 +16,10 @@ const Activity = (props) => {
           Time required : {time}m
         </h2>
         <div className="card-actions">
-          <button className="btn text-black bg-blue-200 border-none">
+          <button
+            onClick={() => handleAddToListClick(activity)}
+            className="btn text-black bg-blue-200 border-none"
+          >
             Add to list
           </button>
         </div>

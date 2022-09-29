@@ -1,6 +1,11 @@
 import React from "react";
 
-const Sidebar = () => {
+const Sidebar = ({ time }) => {
+  // console.log(time);
+  let total = 0;
+  for (const activity of time) {
+    total = total + activity.time;
+  }
   return (
     <div className="grid grid-rows-3 gap-1">
       <div className="profile-section mt-10 items-center justify-center lg:px-5 sm:pl-5">
@@ -46,7 +51,7 @@ const Sidebar = () => {
         <h1 className="text-center font-bold text-xl mb-5">Activity Details</h1>
         <div className="flex">
           <p className="mr-10 text-center font-bold">Activity time</p>
-          <p className="text-center">200s</p>
+          <p className="text-center">{total}m</p>
         </div>
         <div className="flex mt-10">
           <p className="mr-10 text-center font-bold">Break time</p>
