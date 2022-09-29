@@ -8,7 +8,7 @@ const Activity = (props) => {
       <figure className="px-4 pt-4">
         <img src={img} alt="Shoes" className="rounded-xl h-40 w-full" />
       </figure>
-      <div className="card-body items-start text-satrt">
+      <div className="card-body items-start text-start">
         <h1 className="card-title font-bold text-xl">{name}</h1>
         <p className="text-lg font-medium text-zinc-600">For Age : {age}</p>
         <h2 className="text-lg font-medium text-zinc-600">

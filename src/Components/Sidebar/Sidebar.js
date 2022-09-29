@@ -2,7 +2,7 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <div className="grid grid-rows-3 gap-1 items-center justify-center">
+    <div className="grid grid-rows-3 gap-1">
       <div className="profile-section mt-10 items-center justify-center lg:px-5 sm:pl-5">
         <div className="avatar">
           <div className="w-20 rounded">
@@ -32,9 +32,9 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
-      <div className="break-section items-center justify-center">
+      <div className="break-section">
         <h1 className="text-center font-bold text-xl mb-5">Add A Break</h1>
-        <div className="flex flex-col gap-3 lg:px-5 sm:pl-5">
+        <div className="flex flex-col gap-3 lg:px-5 sm:pl-5 m-5">
           <button className="btn btn-outline btn-primary">10s</button>
           <button className="btn btn-outline btn-primary">20s</button>
           <button className="btn btn-outline btn-primary">30s</button>
@@ -42,13 +42,16 @@ const Sidebar = () => {
           <button className="btn btn-outline btn-primary">50s</button>
         </div>
       </div>
-      <div className="details-section">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusamus,
-        provident officia placeat aliquam molestias ipsam nesciunt! Quia
-        provident explicabo mollitia id soluta saepe, modi blanditiis cupiditate
-        praesentium similique at, asperiores corporis optio ad consectetur
-        doloremque voluptates! Facere explicabo ex exercitationem, perferendis
-        dolores consequuntur harum, fugit quia tempora sunt distinctio.
+      <div className="details-section items-center justify-center m-5">
+        <h1 className="text-center font-bold text-xl mb-5">Activity Details</h1>
+        <div className="flex">
+          <p className="mr-10 text-center font-bold">Activity time</p>
+          <p className="text-center">200s</p>
+        </div>
+        <div className="flex mt-10">
+          <p className="mr-10 text-center font-bold">Break time</p>
+          <p>15s</p>
+        </div>
       </div>
     </div>
   );
