@@ -11,7 +11,7 @@ const Activities = () => {
       .then((data) => setActivities(data));
   }, []);
   return (
-    <div className=" activities-container grid lg:grid-cols-6 sm:grid-rows-6 gap-2">
+    <div className=" activities-container grid lg:grid-cols-6 gap-2">
       <div className="content-container lg:col-span-5">
         <p className="lg:text-3xl sm:text-xl m-10 font-mono font-bold text-start">
           Select your Activities

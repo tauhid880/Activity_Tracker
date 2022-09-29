@@ -52,6 +52,9 @@ const Sidebar = () => {
           <p className="mr-10 text-center font-bold">Break time</p>
           <p>15s</p>
         </div>
+        <button className="btn btn-outline btn-primary mt-5">
+          Activity Completed
+        </button>
       </div>
     </div>
   );
