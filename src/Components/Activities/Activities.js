@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Activity from "../Activity/Activity";
+import Sidebar from "../Sidebar/Sidebar";
 import "./Activities.css";
 
 const Activities = () => {
@@ -10,7 +11,7 @@ const Activities = () => {
       .then((data) => setActivities(data));
   }, []);
   return (
-    <div className=" activities-container grid grid-cols-6 gap-2">
+    <div className=" activities-container grid lg:grid-cols-6 gap-2">
       <div className="content-container col-span-5">
         <p className="lg:text-3xl sm:text-xl m-10 font-mono font-bold text-start">
           Select your Activities
@@ -21,7 +22,9 @@ const Activities = () => {
           ))}
         </div>
       </div>
-      <div className="Side-content bg-gray-300 col-span-1">a</div>
+      <div className="Side-content col-span-1">
+        <Sidebar></Sidebar>
+      </div>
     </div>
   );
 };
