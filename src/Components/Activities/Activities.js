@@ -10,18 +10,18 @@ const Activities = () => {
       .then((data) => setActivities(data));
   }, []);
   return (
-    <div className=" activities-container">
-      <div className="mt-10  content-container grid gap-3 grid-cols-3">
-        {/* <p className="">Select your Activities</p> */}
-        {activities.map((activity) => (
-          <Activity activity={activity} key={activity.id}></Activity>
-        ))}
+    <div className=" activities-container grid grid-cols-6 gap-2">
+      <div className="content-container col-span-5">
+        <p className="lg:text-3xl sm:text-xl m-10 font-mono font-bold text-start">
+          Select your Activities
+        </p>
+        <div className="grid grid-col-1 lg:grid-cols-3 gap-x-2 gap-y-5 m-10">
+          {activities.map((activity) => (
+            <Activity activity={activity} key={activity.id}></Activity>
+          ))}
+        </div>
       </div>
-      <div>
-        Activities Calculation Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Expedita dolor dolore quos repellat enim pariatur
-        corrupti ducimus! Excepturi, accusamus repellat!
-      </div>
+      <div className="Side-content bg-gray-300 col-span-1">a</div>
     </div>
   );
 };

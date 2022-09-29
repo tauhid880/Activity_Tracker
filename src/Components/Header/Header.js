@@ -5,7 +5,7 @@ import { faDumbbell } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   return (
-    <div className="navbar bg-blue-300">
+    <div className="navbar bg-gray-300">
       <div className="flex-1">
         <FontAwesomeIcon
           icon={faDumbbell}

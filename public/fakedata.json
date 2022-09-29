@@ -3,63 +3,63 @@
     "id": "1",
     "img": "./img/Walking.jpg",
     "age": "15-40",
-    "time": "30m",
+    "time": 30,
     "name": "Walking"
   },
   {
     "id": "2",
     "img": "./img/Dancing.jpg",
     "age": "15-40",
-    "time": "15m",
+    "time": 15,
     "name": "Dancing"
   },
   {
     "id": "3",
     "img": "./img/Swimming.jpg",
     "age": "20-40",
-    "time": "30m",
+    "time": 30,
     "name": "Swimming"
   },
   {
     "id": "4",
     "img": "./img/Water aerobics.jpg",
     "age": "20-40",
-    "time": "20m",
+    "time": 20,
     "name": "Water aerobics"
   },
   {
     "id": "5",
     "img": "./img/Jogging and running.jpg",
     "age": "10-40",
-    "time": "20m",
+    "time": 20,
     "name": "Jogging and running"
   },
   {
     "id": "6",
     "img": "./img/Bicycle riding.jpg",
     "age": "15-50",
-    "time": "60m",
+    "time": 60,
     "name": "Bicycle riding"
   },
   {
     "id": "7",
     "img": "./img/Yoga.jpg",
     "age": "15-40",
-    "time": "20m",
+    "time": 20,
     "name": "Yoga"
   },
   {
     "id": "8",
     "img": "./img/Lifting weights.jpg",
     "age": "20-40",
-    "time": "10m",
+    "time": 10,
     "name": "Lifting weights"
   },
   {
     "id": "9",
     "img": "./img/Push-ups.jpg",
     "age": "20-40",
-    "time": "5m",
+    "time": 5,
     "name": "Push-ups"
   }
 ]

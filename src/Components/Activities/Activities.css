@@ -1,11 +1,11 @@
-.activities-container {
+/* .activities-container {
   display: grid;
   grid-template-columns: 4fr 1fr;
-}
-.content-container {
+} */
+/* .content-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 45px;
   justify-items: center;
   margin: 150px 82px 150px 104px;
-}
+} */
