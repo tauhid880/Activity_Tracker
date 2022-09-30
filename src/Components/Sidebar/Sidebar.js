@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 
 const Sidebar = ({ time }) => {
   // console.log(time);
@@ -6,6 +7,18 @@ const Sidebar = ({ time }) => {
   for (const activity of time) {
     total = total + activity.time;
   }
+  // LocalStorage  Part
+  const [saveTime, setTime] = useState(0);
+  const handleBreakTime = (event) => {
+    const breakTime = event.target.innerText;
+    setTime(breakTime);
+  };
+  useEffect(() => {
+    const myTime = localStorage.setItem("saveTime", JSON.stringify(saveTime));
+  }, [saveTime]);
+
+  // LocalStorage Part End
+
   return (
     <div className="grid grid-rows-3 gap-1">
       <div className="profile-section mt-10 items-center justify-center lg:px-5 sm:pl-5">
@@ -40,11 +53,36 @@ const Sidebar = ({ time }) => {
       <div className="break-section">
         <h1 className="text-center font-bold text-xl mb-5">Add A Break</h1>
         <div className="flex flex-col gap-3 lg:px-5 sm:pl-5 m-5">
-          <button className="btn btn-outline btn-primary">10s</button>
-          <button className="btn btn-outline btn-primary">20s</button>
-          <button className="btn btn-outline btn-primary">30s</button>
-          <button className="btn btn-outline btn-primary">40s</button>
-          <button className="btn btn-outline btn-primary">50s</button>
+          <button
+            onClick={handleBreakTime}
+            className="btn btn-outline btn-primary"
+          >
+            10m
+          </button>
+          <button
+            onClick={handleBreakTime}
+            className="btn btn-outline btn-primary"
+          >
+            20m
+          </button>
+          <button
+            onClick={handleBreakTime}
+            className="btn btn-outline btn-primary"
+          >
+            30m
+          </button>
+          <button
+            onClick={handleBreakTime}
+            className="btn btn-outline btn-primary"
+          >
+            40m
+          </button>
+          <button
+            onClick={handleBreakTime}
+            className="btn btn-outline btn-primary"
+          >
+            50m
+          </button>
         </div>
       </div>
       <div className="details-section items-center justify-center m-5">
@@ -55,11 +93,15 @@ const Sidebar = ({ time }) => {
         </div>
         <div className="flex mt-10">
           <p className="mr-10 text-center font-bold">Break time</p>
-          <p>15s</p>
+          <p>{saveTime}m</p>
         </div>
-        <button className="btn btn-outline btn-primary mt-5">
+        {/* <button
+          onClick={handleToast}
+          className="btn btn-outline btn-primary mt-5"
+        >
           Activity Completed
         </button>
+        <ToastContainer /> */}
       </div>
     </div>
   );
