@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Sidebar = ({ time }) => {
   // console.log(time);
@@ -18,6 +20,9 @@ const Sidebar = ({ time }) => {
   }, [saveTime]);
 
   // LocalStorage Part End
+  const handleToast = () => {
+    toast.success("Wow you completed today tasks!");
+  };
 
   return (
     <div className="grid grid-rows-3 gap-1">
@@ -95,13 +100,13 @@ const Sidebar = ({ time }) => {
           <p className="mr-10 text-center font-bold">Break time</p>
           <p>{saveTime}m</p>
         </div>
-        {/* <button
+        <button
           onClick={handleToast}
           className="btn btn-outline btn-primary mt-5"
         >
           Activity Completed
         </button>
-        <ToastContainer /> */}
+        <ToastContainer />
       </div>
     </div>
   );
